@@ -1,0 +1,153 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6f0;
+    color: #d63384;
+    text-align: center;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: popIn 1s ease;
+  }
+  
+  .container {
+    background-color: #fff0f5;
+    border: 3px solid #ff69b4;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 0 20px #ffb6c1;
+    animation: fadeSlide 1.2s ease;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    padding: 0.7rem;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  
+  li {
+    background: #ffe0eb;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.4s ease forwards;
+    opacity: 0;
+  }
+  
+  li.done {
+    text-decoration: line-through;
+    color: #999;
+    transform: scale(0.98);
+  }
+  
+  .delete-btn {
+    background-color: #ffb6c1;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+  }
+  
+  .delete-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .emoji {
+    font-size: 1.2rem;
+    margin-right: 5px;
+  }
+  
+  /* Animations */
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.4s ease forwards;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: scale(0.8);
+      height: 0;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
